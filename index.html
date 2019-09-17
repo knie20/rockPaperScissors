@@ -7,6 +7,7 @@
   <title>Rock Paper Scissors</title>
 
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   
 </head>
@@ -20,12 +21,10 @@
     <div id="gameScreen">
         <form id="gameForm" >
             <label for="choiceInput">Choose Rock, Paper, or Scissors</label>
-            <select id="rps">
-                <option value="rock">Rock</option>
-                <option value="paper">Paper</option>
-                <option value="scissors">Scissors</option>
-            </select>
-            <button id='playBtn'>Play</button>
+            <br>
+            <button class="btn btn-primary playBtn" id="rock"><img src="rock.jpg" alt="Rock"></button>
+            <button class="btn btn-primary playBtn" id="paper"><img src="juice.png" alt="Paper"></button>
+            <button class="btn btn-primary playBtn" id="scissors"><img src="scissors.jpg" alt="Scissors"></button>
         </form>
     </div>
 

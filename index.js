@@ -1,8 +1,11 @@
 const startBtn = document.getElementById('startBtn')
-const playBtn = document.getElementById('playBtn')
+const rockBtn = document.getElementById('rock')
+const paperBtn = document.getElementById('paper')
+const scissorsBtn = document.getElementById('scissors')
 const nameForm = document.getElementById('nameForm')
 const gameScreen = document.getElementById('gameScreen')
 var name
+var playerChoice
 
 gameScreen.style.display = 'none'
 
@@ -19,10 +22,32 @@ startBtn.addEventListener('click', function (event){
         nameForm.style.display = 'none'
     }
 })
-playBtn.addEventListener('click', function(event){
+
+rockBtn.addEventListener('click', function(event){
     event.preventDefault()
 
-    var playerChoice = document.getElementById('rps').value
+    playerChoice = 'rock'
+
+    playGame()
+})
+
+paperBtn.addEventListener('click', function(event){
+    event.preventDefault()
+    
+    playerChoice = 'paper'
+
+    playGame()
+})
+
+scissorsBtn.addEventListener('click', function(event){
+    event.preventDefault()
+
+    playerChoice = 'scissors'
+
+    playGame()
+})
+
+function playGame(){
     var cpuChoice = generateChoice();
     
     if(playerChoice == 'rock'){
@@ -50,7 +75,7 @@ playBtn.addEventListener('click', function(event){
             $('#outputList').append('Computer chose ' + cpuChoice + ', ' + name + ' chose ' + playerChoice + '; ' + name + ' wins. <br/>')
         }
     }
-})
+}
 
 function generateChoice(){
     const choices = ['rock', 'paper', 'scissors']
